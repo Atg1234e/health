@@ -441,13 +441,6 @@ BACKGROUND_IMAGES = {
     "Emergency Call": "https://images.unsplash.com/photo-1587745416684-47953f16f02f?auto=format&fit=crop&w=1920&q=80",
 }
 
-# Determine current background image
-if not st.session_state.logged_in:
-    bg_image = BACKGROUND_IMAGES["login"]
-else:
-    # Default initial setup
-    bg_image = BACKGROUND_IMAGES["First Aid Assistant"]
-
 def inject_dynamic_css(bg_url):
     st.markdown(
         f"""
